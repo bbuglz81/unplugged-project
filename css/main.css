@@ -96,6 +96,7 @@ body {
   font-size: 1em;
   text-align: left;
   color: #e2e3ed;
+  background-color: #202322;
 }
 
 ul,
@@ -121,6 +122,7 @@ h2 {
   font-family: 'Poppins', sans-serif;
   font-size: 1.875em;
   font-weight: 500;
+  margin: 0;
 }
 
 h3,
@@ -178,7 +180,7 @@ header .content-wrapper {
   width: 100%;
   height: 1px;
   margin: 10px 0 20px 0;
-  color: #3a3a3a;
+  background: #3a3a3a;
 }
 
 header nav {
@@ -192,6 +194,10 @@ header nav ul {
   display: flex;
   justify-content: space-around;
   width: 100%;
+}
+
+header nav ul li {
+  font-size: 1.125em;
 }
 
 footer {
@@ -208,7 +214,6 @@ footer p {
 
 footer .content-wrapper {
   width: 55%;
-  margin: 50px 0;
 }
 
 footer .contact {
@@ -248,6 +253,7 @@ footer .copyright {
   justify-content: center;
   background: url(../img/unplugged-retreat.jpg) center no-repeat #333;
   background-size: cover;
+  min-height: 500px;
 }
 
 /* Aside */
@@ -258,12 +264,8 @@ aside {
   background: #527158;
 }
 
-aside h3 {
-  margin: 20px 0;
-}
-
 aside .form {
-  margin-top: 30px;
+  margin-top: 0px;
 }
 
 input[type=text] {
@@ -315,7 +317,6 @@ input[type=button] {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  align-items: flex-start;
 }
 
 .features i {
@@ -391,9 +392,9 @@ input[type=button] {
 
 .faq .content-wrapper {
   display: flex;
-  flex-flow: row-wrap;
+  flex-flow: row wrap;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   margin: 50px 0 0 0;
 }
 
@@ -500,17 +501,12 @@ input[type=button] {
 
 /*--------------------------------------- Tablet ----------------------------------------*/
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width:768px) {
 
   /* General styles */
   .content-wrapper {
     max-width: 640px;
     margin: 100px 0;
-  }
-
-  h1 {
-    font-size: 3em;
-    line-height: 1;
   }
 
   h2 {
@@ -551,6 +547,16 @@ input[type=button] {
 
   /* Hero Area */
 
+  .hero-area {
+    min-height: 600px;
+  }
+
+  .hero-area h1 {
+    font-size: 3em;
+    line-height: 1;
+    margin: 0;
+  }
+
   /* Aside */
   aside .content-wrapper {
     margin: 50px 0;
@@ -571,6 +577,10 @@ input[type=button] {
     margin-bottom: 20px;
   }
 
+  .features .features-items {
+    align-items: flex-start;
+  }
+
   .features article {
     display: flex;
     align-items: center;
@@ -580,6 +590,10 @@ input[type=button] {
 
   .features .features-item-description {
     width: 60%;
+  }
+
+  .features i {
+    margin-bottom: 30px;
   }
 
   /* Reviews */
@@ -592,11 +606,8 @@ input[type=button] {
     width: 85%;
   }
 
-  .reviews article div {
-    width: 50%;
-  }
-
-  .reviews figure {
+  .reviews article div,
+  .reviews article figure {
     width: 50%;
   }
 
@@ -607,8 +618,7 @@ input[type=button] {
 
   /* Footer */
   footer .content-wrapper {
-    width: 82%;
-    margin: 100px 0;
+    width: 65%;
   }
 
   footer h4 {
@@ -624,11 +634,15 @@ input[type=button] {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: row;
   }
 
   footer .contact {
     margin-bottom: 0;
+  }
+
+  footer .social-icons {
+    width: 12.5em;
+    justify-content: space-between;
   }
 
   footer .copyright {
@@ -639,7 +653,7 @@ input[type=button] {
   .mission-content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding-top: 20px;
   }
 
@@ -679,18 +693,17 @@ input[type=button] {
     width: 100%;
   }
 
-  .faq h4, 
+  .faq h4,
   .faq p {
     font-size: .875em;
     line-height: 1.125;
   }
-
 }
 
 /*--------------------------------------- Desktop ----------------------------------------*/
 
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width:1200px) {
 
   /* General styles */
 
@@ -706,7 +719,8 @@ input[type=button] {
     font-size: 2.25em;
   }
 
-  h3, h4 {
+  h3,
+  h4 {
     font-size: 1.875em;
   }
 
@@ -718,7 +732,7 @@ input[type=button] {
   /* Hero */
 
   .hero-area h1 {
-    width: 70%;
+    width: 80%;
     font-size: 3.75em;
   }
 
@@ -752,36 +766,41 @@ input[type=button] {
   .reviews h2 {
     padding-bottom: 50px;
   }
-}
 
-/*-------------------- About Page --------------------*/
+  footer h4 {
+    font-size: 1.875em;
+  }
 
-.mission h2,
-.contact-section,
-.content-wrapper h2 {
-  width: 95%;
-  font-size: 3em;
-}
 
-.map figure {
-  padding-bottom: 37%;
-}
+  /*-------------------- About Page --------------------*/
 
-/*-------------------- FAQ Page --------------------*/
+  .mission h2,
+  .contact-section .content-wrapper h2 {
+    width: 95%;
+    font-size: 3em;
+  }
 
-.faq h2 {
-  width: 100%;
-  font-size: 3em;
-}
+  .map figure {
+    padding-bottom: 37%;
+  }
 
-.faq h4, 
-.faq p {
-  font-size: 1.125em;
-  line-height: 1;
-}
+  .contact-content h4 {
+    font-size: 1.875em;
+  }
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+  /*-------------------- FAQ Page --------------------*/
+
+  .faq h2 {
+    width: 100%;
+    font-size: 3em;
+  }
+
+  .faq h4,
+  .faq p {
+    font-size: 1.125em;
+    line-height: 1;
+  }
+
 }
 
 @media print,

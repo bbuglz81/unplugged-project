@@ -608,7 +608,7 @@ input[type=button] {
 
   .reviews article div,
   .reviews article figure {
-    width: 50%;
+    width: 48%;
   }
 
   .reviews h3 {
@@ -658,7 +658,7 @@ input[type=button] {
   }
 
   .mission-content p {
-    width: 50%;
+    width: 48%;
   }
 
   .map figure {
